@@ -4,21 +4,20 @@
   <meta charset="UTF-8">
   <title>Smart Home Service</title>
 
-  <!-- Tailwind CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <body class="font-sans">
 
   <!-- ================= TOP BAR ================= -->
   <div class="bg-gray-100 text-sm py-3">
     <div class="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
 
-      <!-- Left -->
       <div class="flex flex-col md:flex-row md:items-center text-gray-600 gap-3 md:gap-6 text-center md:text-left">
         <span>
           <i class="fa-regular fa-clock mr-2"></i>
@@ -33,81 +32,84 @@
         </span>
       </div>
 
-      <!-- Right -->
       <div class="flex flex-col md:flex-row items-center gap-3">
-
         <a href="#"
           class="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 font-bold transition duration-300">
           FREE ESTIMATION
         </a>
 
-        <div class="flex items-center gap-4 text-gray-700">
+        <!-- <div class="flex items-center gap-4 text-gray-700">
           <i class="fa-brands fa-facebook-f cursor-pointer hover:text-blue-500"></i>
           <i class="fa-brands fa-twitter cursor-pointer hover:text-blue-500"></i>
-          <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-        </div>
+          <i class="fa-brands fa-instagram cursor-pointer hover:text-blue-500"></i>
+        </div> -->
       </div>
+
     </div>
   </div>
 
-  <!-- ================= NAVBAR ================= -->
-  <header class="absolute w-full bg-black/30">
+  <!-- ================= HERO SECTION ================= -->
+  <div class="relative h-screen">
 
-    <div class="w-[90%] mx-auto flex justify-between items-center py-4">
+    <!-- Mobile Image -->
+    <img 
+      src="./Images/Hero-Image-small.png"
+      class="absolute inset-0 w-full h-full object-cover block md:hidden mt-[70px]"
+    />
 
-      <!-- Logo -->
-      <div class="flex items-center text-white text-xl font-bold">
-        <div class="w-10 h-10 bg-sky-500 flex items-center justify-center rounded-md mr-3">
-          SHS
+    <!-- Desktop Image -->
+    <img 
+      src="./Images/hero-Image.png"
+      class="absolute inset-0 w-full h-full object-cover hidden md:block"
+    />
+
+    <!-- Optional Overlay -->
+    <!-- <div class="absolute inset-0 bg-black/40"></div> -->
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="relative z-10 w-full bg-black/50">
+      <div class="w-[90%] mx-auto flex justify-between items-center py-4">
+
+        <div class="flex items-center text-white text-xl font-bold">
+          <div class="w-10 h-10 bg-sky-500 flex items-center justify-center rounded-md mr-3">
+            SHS
+          </div>
+          Smart Home Service
         </div>
-        Smart Home Service
+
+        <nav class="hidden md:block">
+          <ul class="flex gap-8 text-white font-medium">
+            <li class="relative after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-full after:h-[3px] after:bg-sky-500">
+              HOME
+            </li>
+            <li class="cursor-pointer hover:text-sky-400">ABOUT</li>
+            <li class="cursor-pointer hover:text-sky-400">BLOG</li>
+            <li class="cursor-pointer hover:text-sky-400">SHOP</li>
+            <li class="cursor-pointer hover:text-sky-400">ELEMENTS</li>
+          </ul>
+        </nav>
+
+        <div class="md:hidden text-white text-2xl cursor-pointer">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
       </div>
+    </header>
 
-      <!-- Desktop Menu -->
-      <nav class="hidden md:block">
-        <ul class="flex gap-8 text-white font-medium">
-          <li class="relative after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-full after:h-[3px] after:bg-sky-500">
-            HOME
-          </li>
-          <li class="cursor-pointer hover:text-sky-400">ABOUT</li>
-          <li class="cursor-pointer hover:text-sky-400">BLOG</li>
-          <li class="cursor-pointer hover:text-sky-400">SHOP</li>
-          <li class="cursor-pointer hover:text-sky-400">ELEMENTS</li>
-        </ul>
-      </nav>
-
-      <!-- Mobile Hamburger -->
-      <div class="md:hidden text-white text-2xl cursor-pointer">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
-    </div>
-
-    <!-- ================= HERO ================= -->
-
-
-      <!-- Mobile Image -->
-          <img 
-            src="./Images/Hero-Image-small.png"
-            class="block md:hidden w-full"
-          />
-
-          <!-- Desktop Image -->
-          <img 
-            src="./Images/hero-Image.png"
-            class="hidden md:block w-full"
-          />
-    <!-- <div class="h-screen bg-cover bg-center flex items-center justify-center"
-      style="background-image: url('../hero Image.png');">
-
+    <!-- Hero Button -->
+    <div class="relative z-10 flex flex-col md:flex-row    justify-center md:justify-end mx-6 md:mx-[10rem] mt-[12rem] md:mt-auto items-center  h-full flex-end text-center  ">
       <a href="#"
-        class="bg-sky-500 hover:bg-sky-600 text-white px-8 py-3 font-semibold text-lg transition">
+        class="bg-sky-500 hover:bg-sky-600  md:w-[12rem]  md:w-[17rem] text-white px-8 py-3  font-semibold my-5 text-sm md:text-lg transition uppercase">
         Book Service Now
       </a>
+      <a href="tel:+916204278740"
+        class="bg-white hover:bg-gray-200    md:w-[12rem] md:w-[17rem] text-black mx-8 px-8 py-3 font-semibold text-sm md:text-lg  transition uppercase">
+          Call Us +91 6204278740
+      </a>
+   
+    </div>
 
-    </div> -->
-
-  </header>
+  </div>
 
 </body>
 </html>
